@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Alumno {
 
-    public String nombre;
-    public int edad;
-    public ArrayList<Matricula> matriculas;
+    protected String nombre;
+    protected int edad;
+    protected ArrayList<Matricula> matriculas;
 
     public Alumno(String nombre, int edad) {
         this.nombre = nombre;
@@ -12,17 +12,17 @@ public class Alumno {
         this.matriculas = new ArrayList<>();
     }
 
-    public void matricular(Matricula m) {
-        matriculas.add(m);
+    public void matricular(Matricula matricula) {
+        matriculas.add(matricula);
     }
 
     public void mostrarDatos() {
         System.out.println("Alumno: " + nombre);
 
-        for (Matricula m : matriculas) {
-            System.out.println("Asignatura: " + m.asignatura.nombre +
-                    " Profesor: " + m.profesor.nombre +
-                    " Nota: " + m.nota);
+        for (Matricula a : matriculas) {
+            System.out.println("Asignatura: " + a.asignatura.nombre +
+                    " Profesor: " + a.profesor.nombre +
+                    " Nota: " + a.nota);
         }
     }
 

@@ -1,6 +1,6 @@
 public class Asignatura {
 
-    public String nombre;
+    protected String nombre;
 
     public Asignatura(String nombre) {
         this.nombre = nombre;
