@@ -1,29 +1,18 @@
 import java.util.ArrayList;
 
-public class Alumno {
+public class Alumno extends Persona {
 
-    protected String nombre;
     protected int edad;
     protected ArrayList<Matricula> matriculas;
 
     public Alumno(String nombre, int edad) {
-        this.nombre = nombre;
+        super(nombre);
         this.edad = edad;
         this.matriculas = new ArrayList<>();
     }
 
     public void matricular(Matricula matricula) {
         matriculas.add(matricula);
-    }
-
-    public void mostrarDatos() {
-        System.out.println("Alumno: " + nombre);
-
-        for (Matricula a : matriculas) {
-            System.out.println("Asignatura: " + a.asignatura.nombre +
-                    " Profesor: " + a.profesor.nombre +
-                    " Nota: " + a.nota);
-        }
     }
 
     public double calcularMedia() {
