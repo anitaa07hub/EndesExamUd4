@@ -1,3 +1,5 @@
+package Colegio;
+
 import java.util.ArrayList;
 
 public class Curso implements Mostrable{
@@ -29,15 +31,15 @@ public class Curso implements Mostrable{
     public void mostrar() {
         System.out.println("CURSO: " + nombre);
         for (Alumno alumno : alumnos) {
-            System.out.println("Alumno: " + alumno.nombre);
+            System.out.println("Colegio.Alumno: " + alumno.nombre);
         }
 
         for (Asignatura asignatura : asignaturas) {
-            System.out.println("Asignatura: " + asignatura.nombre);
+            System.out.println("Colegio.Asignatura: " + asignatura.nombre);
         }
 
         for (Profesor profesor : profesores) {
-            System.out.println("Profesor: " + profesor.nombre);
+            System.out.println("Colegio.Profesor: " + profesor.nombre);
         }
     }
 }

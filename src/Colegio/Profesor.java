@@ -1,3 +1,5 @@
+package Colegio;
+
 public class Profesor extends Persona{
 
     protected String nombre;

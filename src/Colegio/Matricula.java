@@ -1,3 +1,5 @@
+package Colegio;
+
 public class Matricula implements Mostrable {
 
     protected Alumno alumno;

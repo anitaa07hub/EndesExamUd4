@@ -1,3 +1,5 @@
+package Colegio;
+
 import java.util.ArrayList;
 
 public class GestorMatriculas implements Mostrable{

@@ -1,3 +1,5 @@
+package Colegio;
+
 public class Asignatura {
 
     protected String nombre;

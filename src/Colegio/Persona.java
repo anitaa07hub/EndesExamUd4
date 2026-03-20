@@ -1,3 +1,5 @@
+package Colegio;
+
 public class Persona {
     protected String nombre;
 
