@@ -26,10 +26,10 @@ public class Main {
         gestor.crearMatricula(alumno1, asignatura2, profesor2, 4);
         gestor.crearMatricula(alumno2, asignatura1, profesor1, 9);
 
-        curso.mostrarTodo();
+        curso.mostrar();
 
         System.out.println("------ MATRÍCULAS ------");
-        gestor.mostrarTodas();
+        gestor.mostrar();
 
         System.out.println("------ APROBADOS ------");
         gestor.mostrarAprobados();
@@ -39,6 +39,6 @@ public class Main {
         gestor.subirNotaTodos(1);
 
         System.out.println("------ TRAS SUBIR NOTAS ------");
-        gestor.mostrarTodas();
+        gestor.mostrar();
     }
 }

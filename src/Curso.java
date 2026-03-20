@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Curso {
+public class Curso implements Mostrable{
 
     protected String nombre;
     protected ArrayList<Alumno> alumnos;
@@ -25,10 +25,9 @@ public class Curso {
     public void agregarProfesor(Profesor profesor) {
         profesores.add(profesor);
     }
-
-    public void mostrarTodo() {
+    @Override
+    public void mostrar() {
         System.out.println("CURSO: " + nombre);
-
         for (Alumno alumno : alumnos) {
             System.out.println("Alumno: " + alumno.nombre);
         }
@@ -42,3 +41,5 @@ public class Curso {
         }
     }
 }
+
+

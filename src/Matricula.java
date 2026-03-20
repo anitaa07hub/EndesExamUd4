@@ -1,4 +1,4 @@
-public class Matricula {
+public class Matricula implements Mostrable {
 
     protected Alumno alumno;
     protected Asignatura asignatura;
@@ -12,6 +12,7 @@ public class Matricula {
         this.nota = nota;
     }
 
+    @Override
     public void mostrar() {
         System.out.println(alumno.nombre + " - " +
                 asignatura.nombre + " - " +

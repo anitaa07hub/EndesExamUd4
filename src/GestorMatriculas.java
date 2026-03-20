@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class GestorMatriculas {
+public class GestorMatriculas implements Mostrable{
 
     protected ArrayList<Matricula> matriculas;
 
@@ -21,16 +21,6 @@ public class GestorMatriculas {
         alumno.matricular(matricula);
     }
 
-    public void mostrarTodas() {
-        for (Matricula matricula : matriculas) {
-            System.out.println(
-                matricula.alumno.nombre + " - " +
-                matricula.asignatura.nombre + " - " +
-                matricula.profesor.nombre + " - " +
-                matricula.nota
-            );
-        }
-    }
 
     public void mostrarAprobados() {
         for (Matricula matricula : matriculas) {
@@ -60,5 +50,17 @@ public class GestorMatriculas {
         if (matriculas.size() == 0) return 0;
 
         return suma / matriculas.size();
+    }
+
+    @Override
+    public void mostrar() {
+        for (Matricula matricula : matriculas) {
+            System.out.println(
+                    matricula.alumno.nombre + " - " +
+                            matricula.asignatura.nombre + " - " +
+                            matricula.profesor.nombre + " - " +
+                            matricula.nota
+            );
+        }
     }
 }
