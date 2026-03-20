@@ -17,6 +17,10 @@ public class Alumno extends Persona {
         matriculas.add(matricula);
     }
 
+    /**
+     *
+     * @return
+     */
     public double calcularMedia() {
         double suma = 0;
 

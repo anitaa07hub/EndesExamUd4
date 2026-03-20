@@ -2,14 +2,25 @@ package Colegio;
 
 import java.util.ArrayList;
 
+
 public class GestorMatriculas implements Mostrable{
 
     protected ArrayList<Matricula> matriculas;
 
+    /**
+     *
+     */
     public GestorMatriculas() {
         matriculas = new ArrayList<>();
     }
 
+    /**
+     *
+     * @param alumno
+     * @param asignatura
+     * @param profesor
+     * @param nota
+     */
     public void crearMatricula(Alumno alumno, Asignatura asignatura, Profesor profesor, double nota) {
 
         if (nota < 0) {
@@ -23,7 +34,9 @@ public class GestorMatriculas implements Mostrable{
         alumno.matricular(matricula);
     }
 
-
+    /**
+     *
+     */
     public void mostrarAprobados() {
         for (Matricula matricula : matriculas) {
             if (matricula.nota >= 5) {
@@ -32,6 +45,10 @@ public class GestorMatriculas implements Mostrable{
         }
     }
 
+    /**
+     *
+     * @param puntos
+     */
     public void subirNotaTodos(double puntos) {
         for (Matricula matricula : matriculas) {
             matricula.nota = matricula.nota + puntos;
@@ -42,6 +59,10 @@ public class GestorMatriculas implements Mostrable{
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public double mediaGlobal() {
         double suma = 0;
 
